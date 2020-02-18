@@ -1,6 +1,7 @@
 const Category = require('./model/category.js');
 const Item = require('./model/item.js');
 const ScrImgForItem = require('./model/scrImgForItem.js');
+const User = require('./model/user.js');
 
 
 
@@ -74,6 +75,9 @@ const dummyCateg = [
   
     // Category.deleteMany({})
     //     .then(()=>console.log('Category del'))
+    //     .catch(err=>console.log(err));
+    // User.deleteMany({})
+    //     .then(()=>console.log('User del'))
     //     .catch(err=>console.log(err));
 
    

@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
 
 const scrImgForItemSchema = new mongoose.Schema({
-    im: String,
-    name: String
+    im: String
 });
 const ScrImgForItem = mongoose.model('scrImgForItem', scrImgForItemSchema);
 

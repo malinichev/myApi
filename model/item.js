@@ -1,10 +1,12 @@
 var mongoose = require('mongoose');
-var scrImgForItem = require('./scrImgForItem.js');
+// var scrImgForItem = require('./scrImgForItem.js');
 
-const scrImgForItemSchema = new mongoose.Schema({
-    im: String,
-    name: String
-});
+// const scrImgForItemSchema = new mongoose.Schema({
+//     im: String,
+//     name: String
+// });
+
+
 
 const ItemSchema = new mongoose.Schema({
     label: String,
