@@ -11,7 +11,7 @@ const methodOverride = require('method-override');
 // const LocalStrategy = require('passport-local');
 const session = require('express-session');
 
-const MONGO_HOSTNAME = 'mongo';
+const MONGO_HOSTNAME = '90.188.237.123';
 const MONGO_PORT = '27017';
 const MONGO_DB = 'myApi';
 const startport = 2222;
