@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-// var scrImgForItem = require('./scrImgForItem.js');
+var scrImgForItem = require('./scrImgForItem.js');
 
 // const scrImgForItemSchema = new mongoose.Schema({
 //     im: String,
