@@ -5,11 +5,5 @@ services:
         restart: always
         build: .
         ports: 
-            - '8080:80'
-        links:
-            - mongo
-    mongo:
-        container_name: mongo2
-        image: mongo
-        ports: 
-            - '27018:27017'
+            - '2222:2222'
+       

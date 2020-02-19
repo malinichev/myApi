@@ -14,7 +14,7 @@ const session = require('express-session');
 const MONGO_HOSTNAME = 'mongo';
 const MONGO_PORT = '27017';
 const MONGO_DB = 'myApi';
-const startport = 80;
+const startport = 2222;
 
 const isProduction = process.env.NODE_ENV === 'production';
 // console.log(isProduction)
