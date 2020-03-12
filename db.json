@@ -1,10 +1,23 @@
 {
   "posts": [
-  {
+    { "id": 1, "title": "Post 1",    "userId": 1, },
+    { "id": 2, "title": "Post 2" ,     "userId": 2,},
+    {
     "userId": 1,
-    "id": 1,
-    "title": "sunt",
-    "body": "quia et"
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam "
   },
-]
+  ],
+
+  "users": [
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+  },
+    {
+    "id": 2,
+    "name": "Serg mal",
+  }
+  ]
 }
