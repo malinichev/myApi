@@ -7,19 +7,14 @@
     "body": "quia et suscipit\nsuscipit recusandae consequuntur "
   },
   {
-    "userId": 8,
+    "userId": 1,
     "id": 80,
     "title": "labore in ex et explicabo corporis aut quas",
     "body": "ex quod dolorem ea eum iure "
   },
+ 
   {
-    "userId": 9,
-    "id": 81,
-    "title": "tempora rem veritatis voluptas quo dolores vero",
-    "body": "facere qui nesciunt est voluptatum "
-  },
-  {
-    "userId": 9,
+    "userId": 10,
     "id": 82,
     "title": "laudantium voluptate suscipit sunt enim enim",
     "body": "ut libero sit aut totam in"
@@ -33,20 +28,6 @@
     "username": "Bret",
     "email": "Sincere@april.biz",
     
-  },
-  {
-    "id": 8,
-    "name": "Nicholas Runolfsdottir V",
-    "username": "Maxime_Nienow",
-    "email": "Sherwood@rosamond.me",
-    
-  },
-  {
-    "id": 9,
-    "name": "Glenna Reichert",
-    "username": "Delphine",
-    "email": "Chaim_McDermott@dana.io",
-   
   },
   {
     "id": 10,
