@@ -1,23 +1,13 @@
 {
   "posts": [
-    { "id": 1, "title": "Post 1",    "userId": 1, },
-    { "id": 2, "title": "Post 2" ,     "userId": 2,},
-    {
-    "userId": 1,
-    "id": 4,
-    "title": "eum et est occaecati",
-    "body": "ullam "
-  },
+    { "userId": 1, "id": 1, "title": "Post 1", "body": "Post 1" },
+    { "userId": 2, "id": 2, "title": "Post 2", "body": "Post 2" },
+    { "userId": 1, "id": 3, "title": "Post 3", "body": "Post 3" },
+    { "userId": 2, "id": 4, "title": "Post 4", "body": "Post 4" },
   ],
-
-  "users": [
-  {
-    "id": 1,
-    "name": "Leanne Graham",
-  },
-    {
-    "id": 2,
-    "name": "Serg mal",
-  }
-  ]
+  "comments": [
+    
+    { "userId": 1, "id": 1, "name": "Sergey", },
+    { "userId": 2, "id": 2, "name": "Smith",  }
+  ],
 }
