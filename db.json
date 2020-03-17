@@ -1,9 +1,9 @@
 {
   "posts": [
-    { "userId": 1, "id": 1, "title": "Post 1", "body": "Post 1" },
-    { "userId": 2, "id": 2, "title": "Post 2", "body": "Post 2" },
-    { "userId": 1, "id": 3, "title": "Post 3", "body": "Post 3" },
-    { "userId": 2, "id": 4, "title": "Post 4", "body": "Post 4" }
+    { "userId": 1, "id": 1, "title": "Post 1 title", "body": "Post 1 body" },
+    { "userId": 2, "id": 2, "title": "Post 2 title", "body": "Post 2 body" },
+    { "userId": 1, "id": 3, "title": "Post 3 title", "body": "Post 3 body" },
+    { "userId": 2, "id": 4, "title": "Post 4 title", "body": "Post 4 body" }
   ],
   "users": [
     { "userId": 1, "id": 1, "name": "Sergey" },
