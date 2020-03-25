@@ -166,6 +166,15 @@ router.delete('/:idCat/item/:idItem', auth.required,  (req,res)=>{   //DEL ITEMM
           .catch(err=>console.log(err));
   }
 });
+router.delete('/:idCat/item/:idItem/im/:idImg', auth.required,  (req,res)=>{   //DEL Image
+  if(req.params.idImg){
+    ScrImgForItem.findByIdAndDelete(req.params.idImg)
+          .then(el=>{
+              res.status(200).json({'Img ID is Del':req.params.idImg});
+          })
+          .catch(err=>console.log(err));
+  }
+});
 
 
 router.put('/:id', auth.required, (req,res)=>{    //EDIT CATEGORY

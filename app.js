@@ -1,5 +1,24 @@
 const express = require('express');
+
+const https = require("https"),
+  fs = require("fs"),
+  helmet = require("helmet");
+
+const options = {
+key: fs.readFileSync("/etc/letsencrypt/live/react24.site/privkey.pem"),
+cert: fs.readFileSync("/etc/letsencrypt/live/react24.site/fullchain.pem") // these paths might differ for you, make sure to copy from the certbot output
+};
+
+
 const app = express();
+
+app.use(helmet()); // Add Helmet as a middleware
+
+// app.use((req, res) => {
+//     res.writeHead(200);
+//     res.end("hello world\n");
+//   });
+
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -11,9 +30,11 @@ const methodOverride = require('method-override');
 // const LocalStrategy = require('passport-local');
 const session = require('express-session');
 
-const MONGO_HOSTNAME = '90.188.237.123';
+const MONGO_HOSTNAME = 'react24.site';
 const MONGO_PORT = '27017';
 const MONGO_DB = 'myApi';
+
+
 const startport = 2222;
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -57,25 +78,31 @@ app.use(require('./routes'));
 
 //Error handlers & middlewares
 if(!isProduction) {
+  console.log("------------------------------------");
+  console.log("!!!isProduction route middleware to verify a token");
+  console.log("");
     app.use((err, req, res) => {
       res.status(err.status || 500);
   
       res.json({
         errors: {
-          message: err.message,
-          error: err,
+          message: ` ОШИБОЧКА!!!!!`,
+          error: ` ОШИБОЧКА!!!!!`,
         },
       });
     });
   }
 
 app.use((err, req, res) => {
+  console.log("------------------------------------");
+  console.log("route middleware to verify a token");
+  console.log("");
     res.status(err.status || 500);
   
     res.json({
       errors: {
-        message: err.message,
-        error: {},
+        message: ` ОШИБОЧКА!!!!!`,
+        error: ` ОШИБОЧКА!!!!!`,
       },
     });
   });
@@ -101,6 +128,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 //     res.status(200).json({'sucsses!!':'User logOut'});
 // });
 
-app.listen(startport,process.env.localhost, ()=>{
-    console.log(`serv is start in ${startport} ...`);
+
+
+// app.listen(8000,process.env.localhost, ()=>{
+//   console.log('serv is start...8000');
+// });
+
+https.createServer(options, app).listen(startport,process.env.localhost, ()=>{
+  console.log(`serv is start in ${startport} ...`);
 })

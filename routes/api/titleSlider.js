@@ -3,6 +3,7 @@
 const router = require('express').Router();
 const auth = require('../auth');
 const TitleSlider = require('../../model/titleSlider');
+var cors = require('cors');
 
 // all title
 router.get('/',(req,res)=>{
@@ -33,7 +34,7 @@ router.post('/new', auth.required, (req,res)=>{   // NEW CATEGORY
   }
  
  
-    console.log(req.body);
+    console.log('dasfdsfdsfdfsdfs');
     TitleSlider.create(req.body)
       .then(tit=>{
         tit.save();
@@ -46,18 +47,18 @@ router.post('/new', auth.required, (req,res)=>{   // NEW CATEGORY
         })}
       );
 })
-router.delete('/:id', auth.required, (req,res)=>{  //DELLL
-
+router.delete('/:id', cors(), auth.required, (req,res)=>{  //DELLL
+  console.log(req.params.id, '  ___________ID DEL')
 
   TitleSlider.findByIdAndDelete(req.params.id)
                   .then(el=>{
                       
-                      res.status(200).json({'TitleSlider':"is del"});
+                      res.status(200).json({"TitleSlider":"is del"});
                       
                   })
                   .catch(err=>console.log(err));
 });
-router.put('/:id', auth.required, (req,res)=>{  //Edit
+router.put('/:id', cors(), auth.required, (req,res)=>{  //Edit
   if(req.params.id && req.body){
     TitleSlider.findByIdAndUpdate(req.params.id, req.body)
         .then(el=>{
